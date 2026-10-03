@@ -61,10 +61,8 @@ board. Two commands handle the edge cases:
   `/notme` (unlinks their own account, nothing else), then claim it.
 
 > **Trade-off to be aware of.** Nobody can correct anyone else's status. If
-> Hil tells Mum by voice that she's out and never taps, the board stays wrong
-> and no one can fix it — her column just sits on "have not indicated" until
-> she does. If that turns out to be common, the fix is to let Mum override;
-> it's a small change.
+> Amber tells David by text that her plans have changed but never updates in
+> telegram, the board stays wrong until she does. 
 
 ---
 
@@ -81,7 +79,7 @@ install.
 
 ### 1. Deploy
 
-**[Deploy to Cloudflare](https://deploy.workers.cloudflare.com/?url=https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPO-NAME)**
+**[Deploy to Cloudflare](https://deploy.workers.cloudflare.com/?url=https://github.com/lyxhil/Household-Meals-Together)**
 
 Click it, sign into (or create) your Cloudflare account, and follow the
 prompts. Partway through it'll ask you to fill in a few values —
@@ -105,8 +103,8 @@ In Telegram, message [@BotFather](https://t.me/botfather):
 /newbot
 ```
 
-Give it a name (`Home Table`) and a username ending in `bot`
-(e.g. `ourhometable_bot`). BotFather replies with a **token** — that's your
+Give it a name (`Household Meals`) and a username ending in `bot`
+(e.g. `householdmeals_bot`). BotFather replies with a **token** — that's your
 `BOT_TOKEN` above.
 
 Then turn off privacy mode so the bot can see commands reliably:
@@ -258,13 +256,12 @@ iOS has no native "pin a chat to the home screen", so you go through
 Shortcuts. In the group, send `/link` — the bot prints the exact link for
 your group. Then on each iPhone:
 
-1. Save `icon.png` to Photos
-2. Open **Shortcuts** → **+** → **Add Action** → search **Open URL**
-3. Paste the `tg://privatepost?...` link the bot gave you
-4. Tap the **dropdown/chevron at the top** of the shortcut editor →
+1. Open **Shortcuts** → **+** → **Add Action** → search **Open URL**
+2. Paste the `tg://privatepost?...` link the bot gave you
+3. Tap the **dropdown/chevron at the top** of the shortcut editor →
    **Add to Home Screen** directly — this same panel also lets you rename
    it and pick `icon.png` as its icon
-5. If your iOS version doesn't show that option: tap the shortcut name at
+4. If your iOS version doesn't show that option: tap the shortcut name at
    the top → rename to **Home Table** → share icon → **Add to Home
    Screen** → tap the icon thumbnail → **Choose Photo** → pick
    `icon.png` → **Add**
