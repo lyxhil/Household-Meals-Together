@@ -1,0 +1,12 @@
+# Never commit real secret values — only .dev.vars.example (placeholders)
+# should ever be public. If you run `wrangler dev` locally and create a
+# real .dev.vars with your actual BOT_TOKEN etc., this keeps it out of git.
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Wrangler's local state/cache
+.wrangler/
+
+# If you ever add npm packages
+node_modules/

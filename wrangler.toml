@@ -1,0 +1,24 @@
+name = "hometable-bot"
+main = "worker.js"
+compatibility_date = "2026-09-27"
+
+# Sunday 02:00 UTC = Sunday 10:00 SGT
+# Note: Cloudflare's day-of-week is 1=Sunday..7=Saturday, NOT the usual 0=Sunday.
+# Using the SUN abbreviation avoids the ambiguity entirely.
+[triggers]
+crons = ["0 2 * * SUN"]
+
+# No `id` here on purpose. Deployed via the "Deploy to Cloudflare" button,
+# or run through `npx wrangler deploy` in a real terminal, Wrangler creates
+# a fresh KV namespace for you automatically and fills this in on its own.
+# (If your Wrangler version is old enough not to support that, run
+# `npx wrangler kv namespace create HOMETABLE` yourself and paste the id
+# it prints as a new `id = "..."` line below.)
+[[kv_namespaces]]
+binding = "HOMETABLE"
+
+# BOT_TOKEN, WEBHOOK_SECRET and WIDGET_KEY are secrets, not set here — see
+# .dev.vars.example. Deployed via the button, the Cloudflare dashboard asks
+# for them during setup. Deployed by hand:
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put WEBHOOK_SECRET

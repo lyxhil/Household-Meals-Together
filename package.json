@@ -1,0 +1,14 @@
+{
+  "name": "hometable-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Home Table — a Telegram bot that tracks who's eating at home for which meals, so nobody has to ask in the group chat.",
+  "main": "worker.js",
+  "cloudflare": {
+    "bindings": {
+      "BOT_TOKEN": "Your Telegram bot's token from @BotFather — see the README for how to get one",
+      "WEBHOOK_SECRET": "Any random string you make up — keeps your bot's webhook URL private",
+      "WIDGET_KEY": "Optional — only needed for the home-screen widget. Any random string you make up"
+    }
+  }
+}

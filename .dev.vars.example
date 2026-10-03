@@ -1,0 +1,15 @@
+# Copy this file to `.dev.vars` for local testing. If you deployed via the
+# "Deploy to Cloudflare" button, you'll instead be asked to fill these in
+# on the Cloudflare dashboard during setup. Deploying by hand, set each one
+# with `npx wrangler secret put <NAME>` instead.
+
+# Required — the token @BotFather gives you when you create your bot.
+BOT_TOKEN=paste-your-botfather-token-here
+
+# Required — make up any random string of your own. Keeps your webhook
+# URL private so only Telegram can trigger it.
+WEBHOOK_SECRET=make-up-any-random-string
+
+# Optional — only needed if you want the home-screen widget. Make up any
+# random string of your own.
+WIDGET_KEY=make-up-any-random-string
