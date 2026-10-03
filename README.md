@@ -4,7 +4,7 @@ A Telegram bot that posts one pinned message per week. That message **is** the
 board — a table anyone can read at a glance:
 
 ```
-             AL  Aloy  Hil  LCC
+             Amber Ben Carol David
 --------------------------------
 > Mon Dinner  ✓    x    ·    ·
   Tue Dinner  ·    ·    ✓    ·
